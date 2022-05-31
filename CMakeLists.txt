@@ -17,6 +17,10 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 find_package(eCAL REQUIRED)
+find_package(OpenCASCADE REQUIRED)
+if(${OpenCASCADE_FOUND})
+message(${OpenCASCADE_INCLUDE_DIR})
+endif()
 
 add_subdirectory(googletest)
 add_subdirectory(utest)
